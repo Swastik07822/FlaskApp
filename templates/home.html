@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="english">
+   <head>
+      <title> Weather</title>
+      <link rel="stylesheet" type="text/css" href="static/css/home.css" />
+   </head>
+
+   <body>
+      <form action = "/" method = "post", align ='center' enctype= "multipart/form-data">
+         <h1 class="h1">WHERE TO GO?</h1>
+         <p class="box"> Enter the City</p>
+         <p><input type = "text" name = "City" required="required" /></p>
+	      <button class="button button2" type="submit">Search</button>
+      </form>
+      <div>
+         <div class="main">
+            <div class="d1"></div>
+            <div class="d2">               
+               <div class="holo" align="center">
+                  {% for item in result1 %}
+                  <br>{{item}}</br>
+                  {% endfor %}
+            </div>
+            <div class="d3">
+               <div class="holo" align="center">
+                  {% for item in result2 %}
+                  <br>{{item}}</br>
+                  {% endfor %}
+               </div>
+            </div>
+            <div class="d4">
+               <div class="holo" align="center">
+                  {% for item in result3 %}
+                  <br>{{item}}</br>
+                  {% endfor %}
+
+            </div>
+        </div>
+      </div>
+   </body>
+</html>
